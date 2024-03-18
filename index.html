@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"> <!-- Added user-scalable property -->
     <title>50th Anniversary Invitation</title>
     <style>
         body {
@@ -17,6 +18,7 @@
             background: url('./istockphoto-1201183634-1024x1024-transformed.jpeg') no-repeat center center;
             background-size: cover;
         }
+
         .overlay {
             background-color: rgba(255, 255, 255, 0.9);
             max-width: 500px; /* Adjusted max-width for a rectangle */
@@ -24,42 +26,56 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Enable overflow for zooming */
         }
-        h1, h2, h3, h4, h5 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             text-align: center;
             margin: 10px 0;
         }
+
         h2 {
             font-size: 2em;
             color: #ffd700;
             font-family: 'Pacifico', cursive;
         }
+
         h3 {
             font-size: 1.4em;
         }
+
         .name {
             font-size: 1.6em;
             font-family: 'Roboto', sans-serif;
             color: #cc6699;
         }
+
         .venue {
             text-align: left;
             font-weight: bold;
             font-size: 1.2em;
         }
+
         .compliments {
             font-style: italic;
             margin-top: 20px;
             color: #555;
         }
+
         a {
             color: #333;
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
         a:hover {
             color: #e9b71c;
         }
+
         .bible-verse {
             text-align: center;
             color: #ff6347;
@@ -67,29 +83,47 @@
             font-weight: bold;
             margin-bottom: 20px;
         }
+
         p {
             margin: 0;
         }
+
         .schedule {
-            text-align: left; /* Move Schedule to the left side */
+            text-align: left;
+            /* Move Schedule to the left side */
         }
+
         .contact-no {
-            font-weight: bold; /* Bold font for Contact No */
+            font-weight: bold;
+            /* Bold font for Contact No */
         }
-        .date {
-            text-align: left; /* Move Date to the left side */
+
+        /* Center content on any device */
+        @media (max-width: 500px) {
+            .overlay {
+                width: 90%;
+            }
+            .date {
+                text-align: left; /* Move Date to the left side on mobile */
+                margin-left: 0; /* Remove default margin */
+            }
+            img {
+                width: 100%; /* Zoom image on mobile */
+                height: auto;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="overlay">
         <div class="bible-verse">
             <p>"Love never fails." - 1 Corinthians 13:8</p>
         </div>
         <h2>50th Anniversary</h2>
-        <h3 class="name">Mr. Antony Swamy and Mrs. Rosemary</h3>
+        <h3 class="name">Mr.Antony Swamy and Mrs.Rosemary</h3>
         <hr>
-        <h3 class="date">Date: 7th April 2024</h3> <!-- Moved Date to the left -->
+        <h3 class="date" style="text-align: left;">Date: 7th April 2024</h3> <!-- Adjusted alignment -->
         <h3 class="venue">Venue: St. Joseph's Boys High School, Museum Road</h3>
         <p class="contact-no">Contact No: 9591188666</p> <!-- Made Contact No bold -->
         <h3 class="schedule">Schedule</h3>
@@ -99,10 +133,12 @@
             <li>Followed by Lunch at 12:30 PM</li>
         </ul>
         <br> <!-- Line break after the Google Map link -->
-        <a href="https://www.google.com/maps/dir//27,+Museum+Rd,+Shanthala+Nagar,+Ashok+Nagar,+Bengaluru,+Karnataka+560025/@12.9720575,77.5213018,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bae167ec2975bb7:0xf98d7647ba7e3522!2m2!1d77.6037037!2d12.9720705?entry=ttu" style="color: #007bff;">Google Map Link</a>
+        <a href="https://www.google.com/maps/dir//27,+Museum+Rd,+Shanthala+Nagar,+Ashok+Nagar,+Bengaluru,+Karnataka+560025/@12.9720575,77.5213018,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bae167ec2975bb7:0xf98d7647ba7e3522!2m2!1d77.6037037!2d12.9720705?entry=ttu"
+            style="color: #007bff;">Google Map Link</a>
         <hr>
         <h4 class="compliments">With Best Compliments from:</h4>
         <h5 class="compliments">Amalrajan, Maria Joseph, Thangam & Family</h5>
     </div>
 </body>
+
 </html>
